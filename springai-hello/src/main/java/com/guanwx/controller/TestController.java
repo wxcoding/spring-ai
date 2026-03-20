@@ -25,7 +25,6 @@ public class TestController {
         return test;
     }
 
-
     @GetMapping("/ai")
     public String aiTest(@RequestParam String message) {
         String result = openAiChatModel.call(message);
