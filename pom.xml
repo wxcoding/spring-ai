@@ -19,6 +19,12 @@
     <modules>
         <module>springai-hello</module>
         <module>springai-chat</module>
+        <module>springai-function</module>
+        <module>springai-ollama</module>
+        <module>springai-alibaba</module>
+        <module>other</module>
+        <module>rag</module>
+        <module>all</module>
     </modules>
 
 </project>
