@@ -22,9 +22,9 @@
         <module>springai-function</module>
         <module>springai-ollama</module>
         <module>springai-alibaba</module>
-        <module>other</module>
-        <module>rag</module>
-        <module>all</module>
+        <module>springai-other</module>
+        <module>springai-rag</module>
+        <module>springai-all</module>
     </modules>
 
 </project>
