@@ -1,12 +1,12 @@
 package com.guanwx.controller;
 
 import com.alibaba.cloud.ai.dashscope.chat.DashScopeChatOptions;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.chat.memory.InMemoryChatMemory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description:
  * @Version: 1.0
  */
-
+@Slf4j
 @RestController
 public class QwenController {
 
@@ -49,7 +49,9 @@ public class QwenController {
 
     @GetMapping("/simple/chat")
     public String simpleChat(String query) {
-        return dashScopeChatClient.prompt(query).call().content();
+        String content = dashScopeChatClient.prompt(query).call().content();
+        log.info(content);
+        return content;
     }
 
 }
